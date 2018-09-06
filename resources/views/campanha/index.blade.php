@@ -66,8 +66,10 @@
                                             <option value="all">Todos usuarios</option>
                                             <option value="allHomen">Todos os Homens</option>
                                             <option value="allMulher">Todas as Mulheres</option>
-                                            <option value="ProdutoAcesso">Idade entre 18-35</option>
-                                            <option value="ProdutoAcesso">Idade entre 36-50</option>
+                                            <option value="Jovens">Idade entre 18-35</option>
+                                            <option value="Adultos">Idade entre 36-50</option>
+                                            <option value="Idosos">Idade entre 51-100</option>
+
 
                                         </select>
                                     </div>
