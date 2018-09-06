@@ -64,7 +64,7 @@
                                     <div class="col-md-11">
                                         <select class="form-control " name="campanha" id="campanha">
                                             <option value="all">Todos usuarios</option>
-                                            <option value="allHomem">Todos os Homens</option>
+                                            <option value="allHomen">Todos os Homens</option>
                                             <option value="allMulher">Todas as Mulheres</option>
                                             <option value="ProdutoAcesso">Idade entre 18-35</option>
                                             <option value="ProdutoAcesso">Idade entre 36-50</option>

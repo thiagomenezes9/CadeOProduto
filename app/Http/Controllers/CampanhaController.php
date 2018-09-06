@@ -37,9 +37,40 @@ class CampanhaController extends Controller
             return redirect('campanhas')->with('mensagem','Campanha enviada');
         }
 
-        if(strcmp($request->input('campanha'), "allHomem")==0){
+        if(strcmp($request->input('campanha'), "allHomen")==0){
+
+            $usuarios = User::where('sexo', '==' ,'Masculino');
+
+            $titulo = $request->titulo;
+            $conteudo = $request->conteudo;
+
+
+            foreach ($usuarios as $usuario){
+                Mail::to($usuario)->send(new CampanhaNotificacao($titulo, $conteudo));
+            }
+
+            return redirect('campanhas')->with('mensagem','Campanha enviada');
 
         }
+
+
+        if(strcmp($request->input('campanha'), "allMulher")==0){
+
+            $usuarios = User::where('sexo', '==' ,'Feminino');
+
+            $titulo = $request->titulo;
+            $conteudo = $request->conteudo;
+
+
+            foreach ($usuarios as $usuario){
+                Mail::to($usuario)->send(new CampanhaNotificacao($titulo, $conteudo));
+            }
+
+            return redirect('campanhas')->with('mensagem','Campanha enviada');
+
+        }
+
+
 
 
 
